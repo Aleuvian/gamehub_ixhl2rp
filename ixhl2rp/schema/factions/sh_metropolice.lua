@@ -2,7 +2,7 @@
 FACTION.name = "Combine Civil Authority"
 FACTION.description = "A civil protection enforcer, in service to the Combine."
 FACTION.color = Color(50, 100, 150)
-FACTION.pay = 150
+FACTION.pay = 20
 FACTION.models = {"models/police.mdl"}
 FACTION.weapons = {"ix_stunstick"}
 FACTION.isDefault = false

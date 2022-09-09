@@ -30,7 +30,7 @@ function ENT:Use( client )
             local card = client:GetCharacter( ):GetInventory( ):HasItem( "cid" )
             
             if ( card ) then
-                local cid = card:GetData( "id", 0 )
+                local cid = card:GetData( "id", 0 ) -- Here as well
                 local area = client:GetArea( )
                 
                 if ( !area or area == "" ) then
@@ -38,9 +38,9 @@ function ENT:Use( client )
                 end
 
                 self:SetNetVar( "alarm", true )
-                self:SetNetVar( "requester", cid )
+                self:SetNetVar( "requester", cid ) -- This is a good place to fetch and assign the new CID system
 
-                ix.chat.Send( client, "terminal_request", tostring(cid), false, nil, {area} )
+                ix.chat.Send( client, "terminal_request", tostring(cid), false, nil, {area} ) -- Adapt this to the new CID system
 
                 -- Waypoint support.
                 local waypointPlugin = ix.plugin.Get( "waypoints" )
@@ -48,7 +48,7 @@ function ENT:Use( client )
                 if ( waypointPlugin ) then
                     local waypoint = {
                         pos = self:GetPos( ),
-                        text = "Terminal Request - #" .. tostring(cid) .. " | " .. area,
+                        text = "Terminal Request - #" .. tostring(cid) .. " | " .. area, -- Adapt this to the new CID system
                         color = Color( 175, 125, 100 ),
                         addedBy = client,
                         time = CurTime( ) + 300

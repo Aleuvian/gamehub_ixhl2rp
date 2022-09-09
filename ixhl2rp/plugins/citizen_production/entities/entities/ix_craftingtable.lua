@@ -12,7 +12,7 @@ ix.item.RegisterInv(ENT.invType, 5, 4)
 
 if (SERVER) then
 	function ENT:Initialize()
-		self:SetModel("models/props_wasteland/controlroom_desk001b.mdl")
+		self:SetModel("models/mosi/fnv/props/workstations/workbench.mdl")
 		self:PhysicsInit(SOLID_VPHYSICS)
 		self:SetMoveType(MOVETYPE_VPHYSICS)
 		self:SetNetVar("active", false)

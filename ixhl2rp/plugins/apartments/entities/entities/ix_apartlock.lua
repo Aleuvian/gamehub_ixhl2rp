@@ -152,7 +152,7 @@ if (SERVER) then
             return
         end
 
-        local cid = client:GetCharacter():GetInventory():HasItem("cid")
+        local cid = client:GetCharacter():GetInventory():HasItem("cid") -- Woah, we need to adapt this to the new system too!
 
         if client:IsCombine() then
             self:SetLocked(!self:GetLocked())
@@ -167,7 +167,7 @@ if (SERVER) then
             return
         end
 
-        if ( !self:AlreadyOwned(cid:GetData("id")) ) then
+        if ( !self:AlreadyOwned(cid:GetData("id")) ) then -- Same here!
             self:DisplayError()
             self.nextUseTime = CurTime() + 2
     

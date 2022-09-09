@@ -30,7 +30,7 @@ function ENT:Think( )
     end
 end
 
-local combineLogoParts = { 
+local combineLogoParts = { -- I need to get someone else to help me with this, I have no idea what's going on here.
     { 
         { x = 200, y = 77.5 },
         { x = 370, y = 164.5 },

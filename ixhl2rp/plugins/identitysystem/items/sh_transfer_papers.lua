@@ -8,7 +8,7 @@ end
 function ITEM:PopulateTooltip(tooltip)
 	local data = tooltip:AddRow("data")
 	data:SetBackgroundColor(derma.GetColor("Success", tooltip))
-	data:SetText("Name: " .. self:GetData("citizen_name", "Unissued") .. "\nTransfer Number: " .. self:GetData("cid", "00000") .. "\nIssue Date: " .. self:GetData("issue_date", "Unissued"))
+	data:SetText("Name: " .. self:GetData("citizen_name", character:GetName()) .. "\nTransfer Number: " .. self:GetData("cid", character:GetData("cid", id)) .. "\nIssue Date: " .. self:GetData("issue_date", "Unissued")) -- Here's hoping this work, how do I do dates?
 	data:SetFont("BudgetLabel")
 	data:SetExpensiveShadow(0.5 )
 	data:SizeToContents()
