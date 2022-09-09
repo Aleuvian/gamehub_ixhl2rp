@@ -23,10 +23,19 @@
 
 
 PLUGIN.AmmoData[ "assault" ] = {
-	Name = "Ammo for assault rifles",
-	Amount = 30,
-	Price = 2000,
+	Name = "Ammunition for assault rifles.",
+	Amount = 20,
+	Price = 30,
 	Model = "models/Items/BoxSRounds.mdl",
+	Width = 1,
+	Height = 1
+}
+
+PLUGIN.AmmoData[ "sniper" ] = {
+	Name = "Ammunition for sniper rifles.",
+	Amount = 10,
+	Price = 50,
+	Model = "models/items/sniper_round_box.mdl",
 	Width = 1,
 	Height = 1
 }

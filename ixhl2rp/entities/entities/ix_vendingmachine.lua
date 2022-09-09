@@ -14,7 +14,10 @@ ENT.MaxStock = 4
 ENT.Items = {
 	{"REGULAR", "water", 15},
 	{"SPARKLING", "water_sparkling", 25},
-	{"SPECIAL", "water_special", 35}
+	{"SPECIAL", "water_special", 35},
+	{"CHIPS", "union_chips", 40},
+	{"CHOCOLATE", "union_cocolate", 75},
+	{"APPLE", "union_sapple", 100}
 }
 
 function ENT:GetStock(id)
