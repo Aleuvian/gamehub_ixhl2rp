@@ -6,7 +6,7 @@ function ITEM:PopulateTooltip(tooltip)
     
     local line1 = tooltip:AddRow("line1")
     line1:SetBackgroundColor(derma.GetColor("Success", tooltip))
-    line1:SetText("Name: " character.GetName())
+    line1:SetText("Name: ", character.GetName())
     line1:SetFont("BudgetLabel")
     line1:SetExpensiveShadow(0.5)
     line1:SizeToContents()
