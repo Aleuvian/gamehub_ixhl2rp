@@ -1,3 +1,6 @@
+
+-- REWRITE NEEDED, NOT PLANNED, UNUSED OTHERWISE - WCT
+
 AddCSLuaFile()
 ENT.Type = "anim"
 ENT.PrintName = "Loyalty Kiosk"
