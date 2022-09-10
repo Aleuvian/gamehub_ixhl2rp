@@ -8,12 +8,12 @@ ix.config.Add("biosignalDistance", 0, "The maximum distance to see biosignals/ca
 	category = "Combine Technology Overlay"
 })
 
-ix.config.Add("expireBiosignals", 360, "Time in seconds until a lost biosignal disappears.", nil, {
+ix.config.Add("expireBiosignals", 120, "Time in seconds until a lost biosignal disappears.", nil, {
 	data = {min = 10, max = 3600},
 	category = "Combine Technology Overlay"
 })
 
-ix.config.Add("expireRequests", 240, "Time in seconds until a request disappears.", nil, {
+ix.config.Add("expireRequests", 60, "Time in seconds until a request disappears.", nil, {
 	data = {min = 10, max = 3600},
 	category = "Combine Technology Overlay"
 })

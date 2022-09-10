@@ -275,21 +275,18 @@ function PLUGIN:HUDPaint()
 					local showDetail = (Vector(toScreen.x, toScreen.y):Distance(halfScrVector) <= lowDetailBox)
 					local CID = v:GetCharacter():GetData("cid", "UNKNOWN")
 					
-					if (ix.config.Get("useTagSystem") and beholderEyePos:Distance(v:GetPos()) <= (maximumDistance / 6) and v:GetCharacter():GetData("IsCIDTagGone") and CID != "") and Inventory:HasItem("cid") then
-						if ("cid") then
-							local text = "<:: c#" .. ITEM:GetData("cid") .. " ::>"
-							local color = team.GetColor(v:Team()) or color_white
+					if (ix.config.Get("useTagSystem") and beholderEyePos:Distance(v:GetPos()) <= (maximumDistance / 6) and !v:GetCharacter():GetData("IsCIDTagGone") and CID != "") and Inventory:HasItem("cid") then
+						local text = "<:: c#" .. CID .. " ::>"
+						local color = team.GetColor(v:Team()) or color_white
 
-							draw.SimpleText(showDetail and text or lowDetailText, "BudgetLabel", toScreen.x, toScreen.y, color, 1, 1)
-							toScreen.y = toScreen.y + fontHeight
-						else
-							local text = "<:: !ERROR! ::>"
-							local color = team.GetColor (v:Team()) or color_white
+						draw.SimpleText(showDetail and text or lowDetailText, "BudgetLabel", toScreen.x, toScreen.y, color, 1, 1)
+						toScreen.y = toScreen.y + fontHeight
+					else
+						local text = "<:: !RFID MISSING! ::>"
+						local color = team.GetColor (v:Team()) or color_white
 
-							draw.SimpleText(showDetail and text or lowDetailText, "BudgetLabel", toScreen.x, toScreen.y, color, 1, 1)
-							toScreen.y = toScreen.y + fontHeight
-
-						end
+						draw.SimpleText(showDetail and text or lowDetailText, "BudgetLabel", toScreen.x, toScreen.y, color, 1, 1)
+						toScreen.y = toScreen.y + fontHeight
 					end
 
 					local violations = {}
