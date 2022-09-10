@@ -19,7 +19,6 @@ function ITEM:PopulateTooltip(tooltip)
     line2:SizeToContents()
     
     local line3 = tooltip:AddRow("line3")
-    character:GetCreateTime 
     line3:SetBackgroundColor(derma.GetColor("Success", tooltip))
     line3:SetText("Issue date: ", character:GetCreateTime())
     line3:SetFont("BudgetLabel")
