@@ -13,7 +13,7 @@ function ITEM:PopulateTooltip(tooltip)
     
     local line2 = tooltip:AddRow("line2")
     line2:SetBackgroundColor(derma.GetColor("Success", tooltip))
-    line2:SetText("Transfer Number: ", character:GetData(id))
+    line2:SetText("Transfer Number: ", character:GetData(cid))
     line2:SetFont("BudgetLabel")
     line2:SetExpensiveShadow(0.5)
     line2:SizeToContents()
