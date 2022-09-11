@@ -8,7 +8,7 @@ end
 
 function ITEM:PopulateTooltip(tooltip) 
 
-	netstream.hook("OnCharacterCreated", function(client, character)
+	self:Hook("OnCharacterCreated", function(client, character)
 		
     		local data = tooltip:AddRow("data")
     		data:SetBackgroundColor(derma.GetColor("Success", tooltip))
