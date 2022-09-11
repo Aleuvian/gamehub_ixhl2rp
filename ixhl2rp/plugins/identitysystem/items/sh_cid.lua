@@ -6,6 +6,9 @@ function ITEM:GetDescription()
 	return self.description
 end
 -- Get factions, all of this is fucking awful and should be using Character:GetFaction("cwu") instead of self:GetData
+function Item:IsCitizen()
+	return self:GetData("citizen", false)
+end
 
 function ITEM:IsCWU() 
 	return self:GetData("cwu", false)
@@ -26,18 +29,20 @@ end
 --Dynamic Models Rewrite 9/10 -wct
 function ITEM:GetModel()
     if self:IsCWU() then
-      self:setmodel = Model("models/sky/cwuid.mdl")
+      	self:setmodel = Model("models/sky/cwuid.mdl")
     elseif self:IsCMU() then
-      self:setmodel = Model("models/sky/cmuid.mdl")
+     	self:setmodel = Model("models/sky/cmuid.mdl")
     elseif self:IsCIC() then
-      self:setmodel = Model("models/sky/unioncard.mdl")
+     	self:setmodel = Model("models/sky/unioncard.mdl")
     elseif self:IsCombine() then
-      self:setmodel = Model("models/sky/combinecard.mdl")
+      	self:setmodel = Model("models/sky/combinecard.mdl")
+	elseif self:IsCitizen() and not self:IsCMU() and not self:IsCIC() and not self:isCWU() then
+		self:setmodel = Model("models/sky/cid.mdl")
     end
 end
 
 function ITEM:PopulateTooltip(tooltip)
-	if not self:IsCWU() and not self:IsCIC() and not self:IsCMU() and not self:IsCombine() then
+	if self:IsCitizen() then
 		local data = tooltip:AddRow("data")
 		data:SetBackgroundColor(derma.GetColor("Success", tooltip))
 		data:SetText("Name: " .. self:GetData("citizen_name", "Unissued") .. "\nID Number: " .. self:GetData("cid", "00000") .. "\nIssue Date: " .. self:GetData("issue_date", "Unissued")) --		data:SetText("Name: " .. self:GetData("citizen_name", "Unissued") .. "\nID Number: " .. self:GetData("cid", "00000") .. "\nIssue Date: " .. self:GetData("issue_date", "Unissued"))
