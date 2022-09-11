@@ -2,7 +2,8 @@ ITEM.name = "ID Card"
 ITEM.model = Model("models/sky/cid.mdl")
 ITEM.description = "Originally instituted when proposed by Luna Solaris in 2015, the now-standard ID Card system replaced the previous system of exclusively ID Numbers.\nPreviously, Citizens were expected to remember their 5 digit identification number, which was wildly unpopular with the elderly."
 
-function ITEM:GetDescription()
+--[[ Refer to https://github.com/ZeMysticalTaco/ffi-hl2rp/blob/master/ixhl2rp/schema/factions/sh_civil_worker.lua for documentation
+	function ITEM:GetDescription()
 	return self.description
 end
 
@@ -43,7 +44,7 @@ function ITEM:GetModel()
     elseif self:IsCitizen() then
 	return
     end
-end
+end ]]--
 
 function ITEM:PopulateTooltip(tooltip)
 	if self:IsCitizen() then
