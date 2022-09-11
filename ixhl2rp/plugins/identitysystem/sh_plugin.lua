@@ -69,7 +69,7 @@ else
 
 			local data2 = {
 				["citizen_name"] = data[1],
-				["cid"] = inv:GetItemsByUniqueID("transfer_papers"):GetData("id", id),
+				["cid"] = inv:HasItem("transfer_papers"):GetData("id", id),
 				["issue_date"] = TimeString,
 				["officer"] = ply:Name()
 			}
