@@ -5,23 +5,12 @@ ITEM.description = "A small booklet detailing your transfer status."
 function ITEM:GetDescription()
 	return self.description
 end
-
-local doonce == false
-function(client, character)
-	if client and not doonce then
-	doonce == true
-	x == character:GetData("cid", "00000")
-	y == character:GetName()
-	item:setdata("cid", x)
-	item:setdata("charname", y)
-	end
-end
 	
 function ITEM:PopulateTooltip(tooltip)
     
     local data = tooltip:AddRow("data")
     data:SetBackgroundColor(derma.GetColor("Success", tooltip))
-    data:SetText("Name: " .. self:getdata("charname", "didnt work") .. "\nID Number: " .. self:getdata("cid", "didnt work either, LOL RETARD, GET FUCKED, LITERALLY GET FUCKED"))
+    data:SetText("Name: " .. self:GetOwner() .. "\nID Number: " .. self:GetCharacterID("cid", "42069"))
     data:SetFont("BudgetLabel")
     data:SetExpensiveShadow(0.5)
     data:SizeToContents()
