@@ -11,8 +11,8 @@ end
 local doonce = false
 function(client, character)
 	if CLIENT then
-	x = character:GetData("cid", "00000")
-	y = character:GetName()
+	x == character:GetData("cid", "00000")
+	y == character:GetName()
 	doonce = true
 	end
 end
