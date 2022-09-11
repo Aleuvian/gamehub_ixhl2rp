@@ -117,7 +117,7 @@ end
 function ITEM:GetAssociatedCharacter()
 	return self:GetData("associated_character", false)
 end
-]]--
+
 --[[-------------------------------------------------------------------------
 There will always be an associated character because these are -ONLY- given on spawn.
 ---------------------------------------------------------------------------]]
