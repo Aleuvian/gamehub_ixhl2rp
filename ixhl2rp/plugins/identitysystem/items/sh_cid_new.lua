@@ -24,7 +24,7 @@ function ITEM:IsCombine()
 	return self:GetData("metropolice", false)
 end
 
-function ITEM:IsCitizen() -- Do not remove, this is part of an extra check!
+function ITEM:IsCitizen()
 	return self:GetData("citizen", false)
 end
 --[[
@@ -48,7 +48,8 @@ function ITEM:GetModel()
 end ]]--
 function ITEM:GetModel() -- Placeholder function to prevent errors
 	if self:IsCitizen() then
-		return model
+		self:SetModel("models/sky/cid.mdl")
+		return
 	end
 end
 
