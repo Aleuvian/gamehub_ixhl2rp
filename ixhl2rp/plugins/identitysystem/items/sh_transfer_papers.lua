@@ -4,6 +4,7 @@ ITEM.description = "A small booklet detailing your transfer status."
 
 function ITEM:GetDescription()
 	return self.description
+end
 
 function ITEM:PopulateTooltip(tooltip)
     
