@@ -12,6 +12,8 @@ function(client, character)
 	doonce == true
 	x == character:GetData("cid", "00000")
 	y == character:GetName()
+	item:setdata("cid", x)
+	item:setdata("charname", y)
 	end
 end
 	
@@ -19,7 +21,7 @@ function ITEM:PopulateTooltip(tooltip)
     
     local data = tooltip:AddRow("data")
     data:SetBackgroundColor(derma.GetColor("Success", tooltip))
-    data:SetText("Name: " .. y .. "\nID Number: " .. x)
+    data:SetText("Name: " .. self:getdata("charname", "didnt work") .. "\nID Number: " .. self:getdata("cid", "didnt work either, LOL RETARD, GET FUCKED, LITERALLY GET FUCKED"))
     data:SetFont("BudgetLabel")
     data:SetExpensiveShadow(0.5)
     data:SizeToContents()
