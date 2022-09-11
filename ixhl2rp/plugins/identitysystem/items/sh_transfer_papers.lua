@@ -10,10 +10,10 @@ end
 
 local doonce == false
 function(client, character)
-	if CLIENT then
+	if CLIENT and not doonce then
+	doonce == true
 	x == character:GetData("cid", "00000")
 	y == character:GetName()
-	doonce == true
 	end
 end
 	
