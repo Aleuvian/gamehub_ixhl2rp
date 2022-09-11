@@ -152,7 +152,7 @@ if (SERVER) then
             return
         end
 
-        local cid = client:GetCharacter():GetInventory():HasItem("cid") -- Woah, we need to adapt this to the new system too!
+        local cid = client:GetCharacter():GetInventory():HasItem("cid_new") -- Woah, we need to adapt this to the new system too!
 
         if client:IsCombine() then
             self:SetLocked(!self:GetLocked())
