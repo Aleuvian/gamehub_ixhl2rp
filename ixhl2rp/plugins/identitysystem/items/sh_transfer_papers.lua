@@ -6,12 +6,20 @@ function ITEM:GetDescription()
 	return self.description
 end
 
+function ITEM:GetName()
+  return client:player:GetName()
+end 
+
+function ITEM:GetID()
+  return client:character:GetID()
+end 
+
 
 function ITEM:PopulateTooltip(tooltip)
     
     local data = tooltip:AddRow("data")
     data:SetBackgroundColor(derma.GetColor("Success", tooltip))
-    data:SetText("Name: " .. client:player:GetName() .. "\nID Number: " .. client:character:GetID())
+    data:SetText("Name: " .. self:GetName() .. "\nID Number: " .. self:GetID())
     data:SetFont("BudgetLabel")
     data:SetExpensiveShadow(0.5)
     data:SizeToContents()
