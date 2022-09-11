@@ -274,7 +274,7 @@ function PANEL:Init()
 
 	for k, v in pairs(LocalPlayer():GetCharacter():GetInventory():GetItems()) do
 		if v.uniqueID == "transfer_papers" then
-			self.itemswang:AddChoice(v:GetData("citizen_name", "no name?????"))
+			self.itemswang:AddChoice(v:GetData("name", "no name?????"))
 		end
 	end
 
