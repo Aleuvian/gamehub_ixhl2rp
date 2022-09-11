@@ -6,9 +6,9 @@ function ITEM:GetDescription()
 	return self.description
 end
 
-function PLUGIN:OnCharacterCreated(client, character)
+function ITEM:PopulateTooltip(tooltip) 
 
-	function ITEM:PopulateTooltip(tooltip)
+	function PLUGIN:OnCharacterCreated(client, character)
 		
     		local data = tooltip:AddRow("data")
     		data:SetBackgroundColor(derma.GetColor("Success", tooltip))
