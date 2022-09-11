@@ -21,7 +21,7 @@ function ITEM:PopulateTooltip(tooltip)
     	data:SetFont("BudgetLabel")
     	data:SetExpensiveShadow(0.5)
     	data:SizeToContents()
-	print(character:GetName(), character:GetData("cid", id), "Print is a Success!")
+	print(charid, charname, "Print is a Success!")
 	print("If nothing printed above this, FAIL.")
 		
 		
