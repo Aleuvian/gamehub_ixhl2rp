@@ -29,13 +29,13 @@ end
 --Dynamic Models Rewrite 9/10 -wct
 function ITEM:GetModel()
     if self:IsCWU() then
-      	return self:setmodel = Model("models/sky/cwuid.mdl")
+      	return self:SetModel("models/sky/cwuid.mdl")
     elseif self:IsCMU() then
-     	return self:setmodel = Model("models/sky/cmuid.mdl")
+     	return self:SetModel("models/sky/cmuid.mdl")
     elseif self:IsCIC() then
-     	return self:setmodel = Model("models/sky/unioncard.mdl")
+     	return self:SetModel("models/sky/unioncard.mdl")
     elseif self:IsCombine() then
-      	return self:setmodel = Model("models/sky/combinecard.mdl")
+      	return self:SetModel("models/sky/combinecard.mdl")
 	elseif self:IsCitizen() then
 		return ITEM.model
     end
