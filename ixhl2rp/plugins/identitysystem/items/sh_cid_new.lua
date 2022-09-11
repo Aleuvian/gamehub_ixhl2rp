@@ -46,9 +46,10 @@ function ITEM:GetModel()
 	return
     end
 end ]]--
-
-if self:IsCitizen() then -- Remove this code after fixing the above code!
-	return model
+function ITEM:GetModel() -- Placeholder function to prevent errors
+	if self:IsCitizen() then
+		return model
+	end
 end
 
 function ITEM:PopulateTooltip(tooltip)
