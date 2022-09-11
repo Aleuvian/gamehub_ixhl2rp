@@ -2,7 +2,8 @@ ITEM.name = "ID Card"
 ITEM.model = Model("models/sky/cid.mdl")
 ITEM.description = "Originally instituted when proposed by Luna Solaris in 2015, the now-standard ID Card system replaced the previous system of exclusively ID Numbers.\nPreviously, Citizens were expected to remember their 5 digit identification number, which was wildly unpopular with the elderly."
 
---[[ Refer to https://github.com/ZeMysticalTaco/ffi-hl2rp/blob/master/ixhl2rp/schema/factions/sh_civil_worker.lua for documentation
+--Refer to https://github.com/ZeMysticalTaco/ffi-hl2rp/blob/master/ixhl2rp/schema/factions/sh_civil_worker.lua for documentation
+
 	function ITEM:GetDescription()
 	return self.description
 end
@@ -22,7 +23,7 @@ end
 function ITEM:IsCombine() 
 	return self:GetData("metropolice", false)
 end
-]]--
+
 function ITEM:IsCitizen() -- Do not remove, this is part of an extra check!
 	return self:GetData("citizen", false)
 end
