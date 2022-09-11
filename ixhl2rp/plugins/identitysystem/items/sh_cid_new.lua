@@ -111,7 +111,7 @@ function ITEM:PopulateTooltip(tooltip)
 		warning2:SetFont("DermaDefault")
 		warning2:SetExpensiveShadow(0.5)
 		warning2:SizeToContents()
-	end
+	end ]]--
 end
 
 function ITEM:GetAssociatedCharacter()
