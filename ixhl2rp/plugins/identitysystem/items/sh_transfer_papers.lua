@@ -7,22 +7,13 @@ function ITEM:GetDescription()
 end
 
 function ITEM:PopulateTooltip(tooltip) 
-
-	self:Hook("OnCharacterCreated", function(client, character))
-	charname = character:GetName()
-	charid = character:GetData("cid", id)
-	self:SetData("charname", charname)
-	self:SetData("charid", charid)
-		
 		
     	local data = tooltip:AddRow("data")
     	data:SetBackgroundColor(derma.GetColor("Success", tooltip))
-    	data:SetText("Name: " .. self:GetData("charname", "none") .. "\nID Number: " .. self:GetData("charid", "00000"))
+    	data:SetText("Name: " .. self:GetData("name", "none") .. "\nID Number: " .. self:GetData("id", "00000"))
     	data:SetFont("BudgetLabel")
     	data:SetExpensiveShadow(0.5)
     	data:SizeToContents()
-	print(charid, charname, "Print is a Success!")
-	print("If nothing printed above this, FAIL.")
 		
 		
 		
