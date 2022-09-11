@@ -12,7 +12,7 @@ function PLUGIN:OnCharacterCreated(client, character)
 		
     		local data = tooltip:AddRow("data")
     		data:SetBackgroundColor(derma.GetColor("Success", tooltip))
-    		data:SetText("Name: " .. character:GetName() .. "\nID Number: " .. character:GetData("Cid", id)
+    		data:SetText("Name: " .. character:GetName() .. "\nID Number: " .. character:GetData("cid", id))
     		data:SetFont("BudgetLabel")
     		data:SetExpensiveShadow(0.5)
     		data:SizeToContents()
