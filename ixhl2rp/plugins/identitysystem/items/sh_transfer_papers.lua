@@ -2,8 +2,6 @@ ITEM.name = "Transfer Documents"
 ITEM.model = Model("models/zadrakos/combinepassports/passport.mdl")
 ITEM.description = "A small booklet detailing your transfer status."
 
-ix.util.include(
-
 function ITEM:GetDescription()
 	return self.description
 end
