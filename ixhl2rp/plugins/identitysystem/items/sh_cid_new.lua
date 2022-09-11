@@ -59,7 +59,7 @@ function ITEM:PopulateTooltip(tooltip)
 		data:SetExpensiveShadow(0.5)
 		data:SizeToContents()
 	end
-
+--[[
 	if self:IsCWU() then
 		local data = tooltip:AddRow("data")
 		data:SetBackgroundColor(derma.GetColor("Success", tooltip))
@@ -95,14 +95,14 @@ function ITEM:PopulateTooltip(tooltip)
 		data:SetExpensiveShadow(0.5)
 		data:SizeToContents()
 	end
-
+]]--
 	local warning = tooltip:AddRow("warning")
 	warning:SetBackgroundColor(derma.GetColor("Error", tooltip))
 	warning:SetText("Each card has an RFID chip and a photo of whoever was present at the time of it being issued. It would be unwise to get caught with a card that isn't yours.")
 	warning:SetFont("DermaDefault")
 	warning:SetExpensiveShadow(0.5)
 	warning:SizeToContents()
-
+--[[
 	if self:IsCombine() then
 		local warning2 = tooltip:AddRow("warning2")
 		warning2:SetBackgroundColor(derma.GetColor("Error", tooltip))
@@ -116,7 +116,7 @@ end
 function ITEM:GetAssociatedCharacter()
 	return self:GetData("associated_character", false)
 end
-
+]]--
 --[[-------------------------------------------------------------------------
 There will always be an associated character because these are -ONLY- given on spawn.
 ---------------------------------------------------------------------------]]
