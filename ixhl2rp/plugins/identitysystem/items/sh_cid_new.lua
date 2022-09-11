@@ -22,11 +22,11 @@ end
 function ITEM:IsCombine() 
 	return self:GetData("metropolice", false)
 end
-
-function ITEM:IsCitizen()
+]]--
+function ITEM:IsCitizen() -- Do not remove, this is part of an extra check!
 	return self:GetData("citizen", false)
 end
-
+--[[
 --Dynamic Models Rewrite 9/10 -wct
 function ITEM:GetModel()
     if self:IsCWU() then
@@ -45,6 +45,10 @@ function ITEM:GetModel()
 	return
     end
 end ]]--
+
+if self:IsCitizen() then -- Remove this code after fixing the above code!
+	return model
+end
 
 function ITEM:PopulateTooltip(tooltip)
 	if self:IsCitizen() then
