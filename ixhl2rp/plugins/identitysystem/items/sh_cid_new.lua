@@ -46,14 +46,15 @@ function ITEM:GetModel()
 	return
     end
 end ]]--
+
 function ITEM:GetModel() -- Placeholder function to prevent errors
-	if self:IsCitizen() then
+	if true then -- Placeholder to guarantee model assignment
 		return self.model
 	end
 end
 
 function ITEM:PopulateTooltip(tooltip)
-	if self:IsCitizen() then
+	if true then -- change to self:IsCitizen()
 		local data = tooltip:AddRow("data")
 		data:SetBackgroundColor(derma.GetColor("Success", tooltip))
 		data:SetText("Name: " .. self:GetData("citizen_name", "Unissued") .. "\nID Number: " .. self:GetData("cid", "00000") .. "\nIssue Date: " .. self:GetData("issue_date", "Unissued")) --		data:SetText("Name: " .. self:GetData("citizen_name", "Unissued") .. "\nID Number: " .. self:GetData("cid", "00000") .. "\nIssue Date: " .. self:GetData("issue_date", "Unissued"))
