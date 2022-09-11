@@ -8,12 +8,12 @@ function ITEM:GetDescription()
 	return self.description
 end
 
-local doonce = false
+local doonce == false
 function(client, character)
 	if CLIENT then
 	x == character:GetData("cid", "00000")
 	y == character:GetName()
-	doonce = true
+	doonce == true
 	end
 end
 	
