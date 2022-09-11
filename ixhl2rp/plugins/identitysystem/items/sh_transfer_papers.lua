@@ -10,7 +10,7 @@ end
 
 local doonce == false
 function(client, character)
-	if CLIENT and not doonce then
+	if client and not doonce then
 	doonce == true
 	x == character:GetData("cid", "00000")
 	y == character:GetName()
@@ -21,7 +21,7 @@ function ITEM:PopulateTooltip(tooltip)
     
     local data = tooltip:AddRow("data")
     data:SetBackgroundColor(derma.GetColor("Success", tooltip))
-    data:SetText("Name: " .. y .. "\nID Number: " .. x))
+    data:SetText("Name: " .. y .. "\nID Number: " .. x)
     data:SetFont("BudgetLabel")
     data:SetExpensiveShadow(0.5)
     data:SizeToContents()
