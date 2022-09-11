@@ -8,11 +8,20 @@ function ITEM:GetDescription()
 	return self.description
 end
 
+local doonce = false
+function(client, character)
+	if CLIENT then
+	x = character:GetData("cid", "00000")
+	y = character:GetName()
+	doonce = true
+	end
+end
+	
 function ITEM:PopulateTooltip(tooltip)
     
     local data = tooltip:AddRow("data")
     data:SetBackgroundColor(derma.GetColor("Success", tooltip))
-    data:SetText("Name: " .. self:GetOwner()) --"\nID Number: " .. self:GetData("cid")
+    data:SetText("Name: " .. y .. "\nID Number: " .. x))
     data:SetFont("BudgetLabel")
     data:SetExpensiveShadow(0.5)
     data:SizeToContents()
