@@ -69,7 +69,7 @@ else
 
 			local data2 = {
 				["citizen_name"] = data[1],
-				["cid"] = ["id"],
+				["cid"] = "id",
 				["issue_date"] = TimeString,
 				["officer"] = ply:Name()
 			}

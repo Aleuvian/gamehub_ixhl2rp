@@ -6,7 +6,7 @@ PLUGIN.items = PLUGIN.items or {}
 PLUGIN.spawner.positions = PLUGIN.spawner.positions or {}
 
 PLUGIN.items.common = {
-	"wound_bandage"
+	"wound_bandage",
 	"pistolammo",
 	"shotgunammo",
 	"smg1ammo",
@@ -15,7 +15,7 @@ PLUGIN.items.common = {
 }
 
 PLUGIN.items.rare = {
-	"pistol"
+	"pistol",
 	"shotgun",
 	"smg1",
 	"357"

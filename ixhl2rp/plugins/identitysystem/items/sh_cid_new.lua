@@ -5,7 +5,6 @@ ITEM.description = "Originally instituted when proposed by Luna Solaris in 2015,
 function ITEM:GetDescription()
 	return self.description
 end
--- Get factions, all of this is fucking awful and should be using Character:GetFaction("cwu") instead of self:GetData
 
 function ITEM:IsCWU() 
 	return self:GetData("cwu", false)
@@ -24,7 +23,7 @@ function ITEM:IsCombine()
 end
 
 function ITEM:IsCitizen()
-	return self:GetData("citizen"), false)
+	return self:GetData("citizen", false)
 end
 
 --Dynamic Models Rewrite 9/10 -wct
