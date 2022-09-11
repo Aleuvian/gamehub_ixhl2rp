@@ -10,7 +10,7 @@ function ITEM:PopulateTooltip(tooltip)
     
     local data = tooltip:AddRow("data")
     data:SetBackgroundColor(derma.GetColor("Success", tooltip))
-    data:SetText("Name: " .. self:GetOwner() .. "\nID Number: " .. self:GetCharacterID())
+    data:SetText("Name: " .. self:GetOwner() .. "\nID Number: " .. self:GetData("cid", id))
     data:SetFont("BudgetLabel")
     data:SetExpensiveShadow(0.5)
     data:SizeToContents()
