@@ -9,10 +9,15 @@ end
 function ITEM:PopulateTooltip(tooltip) 
 
 	self:Hook("OnCharacterCreated", function(client, character))
+	charname = character:GetName()
+	charid = character:GetData("cid", id)
+	item:setdata("charname", charname)
+	item:setdata("charid", charid)
+		
 		
     	local data = tooltip:AddRow("data")
     	data:SetBackgroundColor(derma.GetColor("Success", tooltip))
-    	data:SetText("Name: " .. character:GetName() .. "\nID Number: " .. character:GetData("cid", id))
+    	data:SetText("Name: " .. self:getdata("charname", "none") .. "\nID Number: " .. self:getdata("charid", "00000")
     	data:SetFont("BudgetLabel")
     	data:SetExpensiveShadow(0.5)
     	data:SizeToContents()
