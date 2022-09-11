@@ -4,22 +4,12 @@ ITEM.description = "A small booklet detailing your transfer status."
 
 function ITEM:GetDescription()
 	return self.description
-end
-
-function ITEM:GetName()
-  return client:player:GetName()
-end 
-
-function ITEM:GetID()
-  return client:character:GetID()
-end 
-
 
 function ITEM:PopulateTooltip(tooltip)
     
     local data = tooltip:AddRow("data")
     data:SetBackgroundColor(derma.GetColor("Success", tooltip))
-    data:SetText("Name: " .. self:GetName() .. "\nID Number: " .. self:GetID())
+    data:SetText("Name: " .. self:player():GetName() .. "\nID Number: " .. self:GetCharacterID())
     data:SetFont("BudgetLabel")
     data:SetExpensiveShadow(0.5)
     data:SizeToContents()
