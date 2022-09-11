@@ -4,29 +4,29 @@ ITEM.description = "Originally instituted when proposed by Luna Solaris in 2015,
 
 --Refer to https://github.com/ZeMysticalTaco/ffi-hl2rp/blob/master/ixhl2rp/schema/factions/sh_civil_worker.lua for documentation
 
-function ITEM:GetDescription()
-	return self.description
-end
+--function ITEM:GetDescription()
+--	return self.description
+--end
 
-function ITEM:IsCWU() 
-	return self:GetData("cwu", false)
-end
+--function ITEM:IsCWU() 
+--	return self:GetData("cwu", false)
+--end
 
-function ITEM:IsCIC()
-	return self:GetData("cic", false)
-end
+--function ITEM:IsCIC()
+--	return self:GetData("cic", false)
+-- end
 
-function ITEM:IsCMU() 
-	return self:GetData("cmu", false)
-end
+-- function ITEM:IsCMU() 
+--	return self:GetData("cmu", false)
+-- end
 
 function ITEM:IsCombine() 
 	return self:GetData("metropolice", false)
 end
 
-function ITEM:IsCitizen()
-	return self:GetData("citizen", false)
-end
+-- function ITEM:IsCitizen()
+--	return self:GetData("citizen", false)
+-- end
 --[[
 --Dynamic Models Rewrite 9/10 -wct
 function ITEM:GetModel()
@@ -46,17 +46,17 @@ function ITEM:GetModel()
 	return
     end
 end ]]--
-function ITEM:GetModel() -- Placeholder function to prevent errors
-	if self:IsCitizen() then
-		return self.model
-	end
-end
+-- function ITEM:GetModel() -- Placeholder function to prevent errors
+-- 	if self:IsCitizen() then
+-- 		return self.model
+--	end
+-- end
 
 function ITEM:PopulateTooltip(tooltip)
-	if self:IsCitizen() then
+--	if self:IsCitizen() then
 		local data = tooltip:AddRow("data")
 		data:SetBackgroundColor(derma.GetColor("Success", tooltip))
-		data:SetText("Name: " .. self:GetData("citizen_name", "Unissued") .. "\nID Number: " .. self:GetData("cid", "00000") .. "\nIssue Date: " .. self:GetData("issue_date", "Unissued")) --		data:SetText("Name: " .. self:GetData("citizen_name", "Unissued") .. "\nID Number: " .. self:GetData("cid", "00000") .. "\nIssue Date: " .. self:GetData("issue_date", "Unissued"))
+		data:SetText("Name: " .. self:GetData("citizen_name", "Unissued") .. "\nID Number: " .. self:GetData("id", "00000") .. "\nIssue Date: " .. self:GetData("issue_date", "Unissued")) --		data:SetText("Name: " .. self:GetData("citizen_name", "Unissued") .. "\nID Number: " .. self:GetData("cid", "00000") .. "\nIssue Date: " .. self:GetData("issue_date", "Unissued"))
 		data:SetFont("BudgetLabel")
 		data:SetExpensiveShadow(0.5)
 		data:SizeToContents()
