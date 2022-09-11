@@ -4,7 +4,7 @@ ITEM.description = "Originally instituted when proposed by Luna Solaris in 2015,
 
 --Refer to https://github.com/ZeMysticalTaco/ffi-hl2rp/blob/master/ixhl2rp/schema/factions/sh_civil_worker.lua for documentation
 
-	function ITEM:GetDescription()
+function ITEM:GetDescription()
 	return self.description
 end
 
@@ -48,8 +48,7 @@ function ITEM:GetModel()
 end ]]--
 function ITEM:GetModel() -- Placeholder function to prevent errors
 	if self:IsCitizen() then
-		self:SetModel("models/sky/cid.mdl")
-		return
+		return self.model
 	end
 end
 
