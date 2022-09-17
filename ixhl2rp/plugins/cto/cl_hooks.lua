@@ -273,9 +273,9 @@ function PLUGIN:HUDPaint()
 
 				if (toScreen.visible and beholder:IsLineOfSightClear(v)) then
 					local showDetail = (Vector(toScreen.x, toScreen.y):Distance(halfScrVector) <= lowDetailBox)
-					local CID = v:GetCharacter():GetData("cid", "UNKNOWN")
+					local CID = v:GetCharacter():GetInventory():HasItem("cid_new"):GetData("id", id)
 					
-					if (ix.config.Get("useTagSystem") and beholderEyePos:Distance(v:GetPos()) <= (maximumDistance / 6) and !v:GetCharacter():GetData("IsCIDTagGone") and CID != "" and !v:GetCharacter():GetInventory():HasItem("cid"):GetData("id", id) ) then
+					if (ix.config.Get("useTagSystem") and beholderEyePos:Distance(v:GetPos()) <= (maximumDistance / 6) and !v:GetCharacter():GetData("IsCIDTagGone") and CID != "") then
 						local text = "<:: c#" .. CID .. " ::>"
 						local color = team.GetColor(v:Team()) or color_white
 
