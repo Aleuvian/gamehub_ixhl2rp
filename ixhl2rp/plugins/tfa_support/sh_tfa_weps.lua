@@ -24,74 +24,9 @@
 
 											-- Assault Rifles --
 
-PLUGIN.GunData[ "tfa_ins2_ak74m" ] = {
-	--Weapon can be Blacklisted and item will be not auto-generated
-	BlackList = false,
-	
-	Slot = "primary",
-	Model = "path_to_model_of_item",
-	iconCam = {
-		tpos = Vector( 0, 0, 0 ),
-		tang = Angle( 0, 0, 0 ),
-		tfov = 0
-	},
-	Width = 5,
-	Height = 2,
-	Weight = 3,
-	Price = 2000,
-	
-	--Weapon Parameters
-	--Prim == Primary
-	Prim = {
-		Ammo = "assault",
-		Damage = 31,
-		KickUp = 0.4,
-		KickDown = 0.4,
-		KickHorizontal = 0.35,
-		Spread = .021,
-		IronAccuracy = .01
-	},
-	
-	--Sec == Secondary
-	Sec = {}
-}
-
-
-PLUGIN.GunData[ "tfa_ins2_ak74m" ] = {
-	--Weapon can be Blacklisted and item will be not auto-generated
-	BlackList = false,
-	
-	Slot = "primary",
-	Model = "path_to_model_of_item",
-	iconCam = {
-		tpos = Vector( 0, 0, 0 ),
-		tang = Angle( 0, 0, 0 ),
-		tfov = 0
-	},
-	Width = 5,
-	Height = 2,
-	Weight = 3,
-	Price = 2000,
-	
-	--Weapon Parameters
-	--Prim == Primary
-	Prim = {
-		Ammo = "assault",
-		Damage = 31,
-		KickUp = 0.4,
-		KickDown = 0.4,
-		KickHorizontal = 0.35,
-		Spread = .021,
-		IronAccuracy = .01
-	},
-	
-	--Sec == Secondary
-	Sec = {}
-}
-
 PLUGIN.GunData[ "tfa_inss_fn_fal_new" ] = {
 	--Weapon can be Blacklisted and item will be not auto-generated
-	BlackList = true,
+	BlackList = false,
 	
 	Slot = "primary",
 	Model = "models/weapons/fnfal/w_fal.mdl",
@@ -123,7 +58,7 @@ PLUGIN.GunData[ "tfa_inss_fn_fal_new" ] = {
 
 PLUGIN.GunData[ "tfa_inss_g36k_new" ] = {
 	--Weapon can be Blacklisted and item will be not auto-generated
-	BlackList = true,
+	BlackList = false,
 	
 	Slot = "primary",
 	Model = "models/weapons/w_g36k.mdl",
@@ -155,7 +90,7 @@ PLUGIN.GunData[ "tfa_inss_g36k_new" ] = {
 
 PLUGIN.GunData[ "tfa_at_ak_15" ] = {
 	--Weapon can be Blacklisted and item will be not auto-generated
-	BlackList = true,
+	BlackList = false,
 	
 	Slot = "primary",
 	Model = "models/weapons/ak_15/w_akm.mdl",
@@ -187,7 +122,7 @@ PLUGIN.GunData[ "tfa_at_ak_15" ] = {
 
 PLUGIN.GunData[ "tfa_at_ak_74" ] = {
 	--Weapon can be Blacklisted and item will be not auto-generated
-	BlackList = true,
+	BlackList = false,
 	
 	Slot = "primary",
 	Model = "models/weapons/ak_74_ins/w_ak74.mdl",
@@ -219,7 +154,7 @@ PLUGIN.GunData[ "tfa_at_ak_74" ] = {
 
 PLUGIN.GunData[ "tfa_at_akm" ] = {
 	--Weapon can be Blacklisted and item will be not auto-generated
-	BlackList = true,
+	BlackList = false,
 	
 	Slot = "primary",
 	Model = "models/weapons/akm_ins/w_akm.mdl",
@@ -251,7 +186,7 @@ PLUGIN.GunData[ "tfa_at_akm" ] = {
 
 PLUGIN.GunData[ "tfa_ins2_cw_ar15" ] = {
 	--Weapon can be Blacklisted and item will be not auto-generated
-	BlackList = true,
+	BlackList = false,
 	
 	Slot = "primary",
 	Model = "models/weapons/tfa_ins2/w_cw_ar15.mdl",
@@ -283,7 +218,7 @@ PLUGIN.GunData[ "tfa_ins2_cw_ar15" ] = {
 
 PLUGIN.GunData[ "tfa_ocipr" ] = {
 	--Weapon can be Blacklisted and item will be not auto-generated
-	BlackList = true,
+	BlackList = false,
 	
 	Slot = "primary",
 	Model = "models/weapons/tfa_ins2/w_cw_ar15.mdl",
@@ -315,7 +250,7 @@ PLUGIN.GunData[ "tfa_ocipr" ] = {
 
 PLUGIN.GunData[ "tfa_ordinalrifle" ] = {
 	--Weapon can be Blacklisted and item will be not auto-generated
-	BlackList = true,
+	BlackList = false,
 	
 	Slot = "primary",
 	Model = "models/weapons/w_ordinalrifle.mdl",
@@ -349,7 +284,7 @@ PLUGIN.GunData[ "tfa_ordinalrifle" ] = {
 
 PLUGIN.GunData[ "tfa_inss2_hk_mp5a5" ] = {
 	--Weapon can be Blacklisted and item will be not auto-generated
-	BlackList = true,
+	BlackList = false,
 												
 	Slot = "primary",
 	Model = "models/weapons/w_inss2_mp5a5.mdl",
@@ -381,7 +316,7 @@ PLUGIN.GunData[ "tfa_inss2_hk_mp5a5" ] = {
 
 PLUGIN.GunData[ "tfa_ins2_sr2m_veresk" ] = {
 	--Weapon can be Blacklisted and item will be not auto-generated
-	BlackList = true,
+	BlackList = false,
 												
 	Slot = "primary",
 	Model = "models/weapons/w_ins2_sr2m_veresk.mdl",
@@ -413,7 +348,7 @@ PLUGIN.GunData[ "tfa_ins2_sr2m_veresk" ] = {
 
 PLUGIN.GunData[ "tfa_inss_m3_new" ] = {
 	--Weapon can be Blacklisted and item will be not auto-generated
-	BlackList = true,
+	BlackList = false,
 												
 	Slot = "primary",
 	Model = "models/weapons/w_m3_grease_gun.mdl",
@@ -445,7 +380,7 @@ PLUGIN.GunData[ "tfa_inss_m3_new" ] = {
 
 PLUGIN.GunData[ "tfa_ins2_sterling" ] = {
 	--Weapon can be Blacklisted and item will be not auto-generated
-	BlackList = true,
+	BlackList = false,
 												
 	Slot = "primary",
 	Model = "models/weapons/tfa_ins2/w_sterling.mdl",
@@ -477,7 +412,7 @@ PLUGIN.GunData[ "tfa_ins2_sterling" ] = {
 
 PLUGIN.GunData[ "tfa_ins2_ump9" ] = {
 	--Weapon can be Blacklisted and item will be not auto-generated
-	BlackList = true,
+	BlackList = false,
 												
 	Slot = "primary",
 	Model = "models/weapons/tfa_ins2/w_ump9.mdl",
@@ -509,7 +444,7 @@ PLUGIN.GunData[ "tfa_ins2_ump9" ] = {
 
 PLUGIN.GunData[ "tfa_mmod_smg" ] = {
 	--Weapon can be Blacklisted and item will be not auto-generated
-	BlackList = true,
+	BlackList = false,
 												
 	Slot = "primary",
 	Model = "models/weapons/tfa_mmod/w_smg1.mdl",
@@ -543,7 +478,7 @@ PLUGIN.GunData[ "tfa_mmod_smg" ] = {
 
 PLUGIN.GunData[ "tfa_mmod_shotgun" ] = {
 	--Weapon can be Blacklisted and item will be not auto-generated
-	BlackList = true,
+	BlackList = false,
 																							
 	Slot = "primary",
 	Model = "models/weapons/tfa_mmod/w_shotgun.mdl",
@@ -575,7 +510,7 @@ PLUGIN.GunData[ "tfa_mmod_shotgun" ] = {
 
 PLUGIN.GunData[ "tfa_ins2_m1014" ] = {
 	--Weapon can be Blacklisted and item will be not auto-generated
-	BlackList = true,
+	BlackList = false,
 																							
 	Slot = "primary",
 	Model = "models/weapons/tfa_ins2/w_m1014.mdl",
@@ -607,7 +542,7 @@ PLUGIN.GunData[ "tfa_ins2_m1014" ] = {
 
 PLUGIN.GunData[ "tfa_ins2_nova" ] = {
 	--Weapon can be Blacklisted and item will be not auto-generated
-	BlackList = true,
+	BlackList = false,
 																							
 	Slot = "primary",
 	Model = "models/weapons/tfa_ins2/w_nova.mdl",
@@ -639,7 +574,7 @@ PLUGIN.GunData[ "tfa_ins2_nova" ] = {
 
 PLUGIN.GunData[ "tfa_ins2_remington_m870" ] = {
 	--Weapon can be Blacklisted and item will be not auto-generated
-	BlackList = true,
+	BlackList = false,
 																							
 	Slot = "primary",
 	Model = "models/weapons/smc/r870/w_remington_m870.mdl",
@@ -671,7 +606,7 @@ PLUGIN.GunData[ "tfa_ins2_remington_m870" ] = {
 
 PLUGIN.GunData[ "tfa_ins2_toz_194m" ] = {
 	--Weapon can be Blacklisted and item will be not auto-generated
-	BlackList = true,
+	BlackList = false,
 																							
 	Slot = "primary",
 	Model = "models/weapons/w_inss2_toz_194m.mdl",
@@ -703,10 +638,10 @@ PLUGIN.GunData[ "tfa_ins2_toz_194m" ] = {
 
 PLUGIN.GunData[ "tfa_heavyshotgun" ] = {
 	--Weapon can be Blacklisted and item will be not auto-generated
-	BlackList = true,
+	BlackList = false,
 																							
 	Slot = "primary",
-	Model = "models/weapons/w_inss2_toz_194m.mdl",
+	Model = "models/weapons/heavyshotgun/w_shotgun_heavy.mdl",
 	iconCam = {
 		tpos = Vector( 0, 0, 0 ),
 			tang = Angle( 0, 0, 0 ),
