@@ -9,24 +9,26 @@ FACTION.isDefault = false
 FACTION.isGloballyRecognized = true
 FACTION.runSounds = {[0] = "NPC_MetroPolice.RunFootstepLeft", [1] = "NPC_MetroPolice.RunFootstepRight"}
 
--- another rewrite of line 14-30 lol 
+-- generic pull
 
 function FACTION:OnCharacterCreated(client, character)
-    local inventory = character:GetInventory()
-    local str        = "CCA:c24.i2-A"..math.random(00,99) .. "://"..math.random(00000,99999)
-    local TimeStamp = os.time()
-    local TimeString= os.date("%H:%M:%S - %d%m%Y", TimeStamp)
+	local inventory = character:GetInventory()
+	local id = Schema:ZeroNumber(math.random(1, 99999), 5)	
+	local service_number = Schema:ZeroNumber(math.random(1, 99999), 5)
 
-    inventory:Add("pistol", 1)
-    inventory:Add("pistolammo", 2)
-    inventory:Add("cid", 1, { -- Compatibility for IdentitySystem.
-        ["citizen_name"]             = character:GetName(),
-        ["service_number"]            = str,
-        ["cid"]                        = str,
-        ["issue_date"]                = TimeString,
-        ["cca"]                        = true,
-        ["associated_character"]    = character:GetID()
-    })
+	character:setdata("service#", service_number)
+	character:setdata("cid," id)
+
+	inventory:Add("pistol", 1)
+	inventory:Add("pistolammo", 2)
+	inventory:Add("cid", 1, { -- Compatibility for IdentitySystem.
+		["citizen_name"] 			= character:GetName(),
+		["service_number"]			= service_number,
+		["cid"]						= id,
+		["issue_date"]				= tostring(TimeString),
+		["cca"]						= true,
+		["associated_character"]	= character:GetID()
+	})
 end
 
 function FACTION:GetDefaultName(client)
