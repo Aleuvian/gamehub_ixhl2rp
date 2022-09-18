@@ -3,27 +3,22 @@ FACTION.name = "Citizen"
 FACTION.description = "A regular human citizen enslaved by the Universal Union."
 FACTION.color = Color(150, 125, 100, 255)
 FACTION.isDefault = true
-FACTION.models = {
-	"models/hl2rp/female_01.mdl",
-	"models/hl2rp/female_02.mdl",
-	"models/hl2rp/female_03.mdl",
-	"models/hl2rp/female_04.mdl",
-	"models/hl2rp/female_06.mdl",
-	"models/hl2rp/female_07.mdl",
-	"models/hl2rp/male_01.mdl",
-	"models/hl2rp/male_02.mdl",
-	"models/hl2rp/male_03.mdl",
-	"models/hl2rp/male_04.mdl",
-	"models/hl2rp/male_05.mdl",
-	"models/hl2rp/male_06.mdl",
-	"models/hl2rp/male_07.mdl",
-	"models/hl2rp/male_08.mdl",
-	"models/hl2rp/male_09.mdl"
 
-}
+-- This is fetching the models, condensing 10 lines into 7, nice!
+for i = 1, 7 do 
+	table.insert(FACTION.models, "models/hl2rp/female_0"..i..".mdl")
+end
+
+for i = 1, 9 do
+	table.insert(FACTION.models, "models/hl2rp/male_0"..i..".mdl")
+end 
+
+local TimeStamp = os.date( "%H:%M:%S - %d/%m/%y, Timestamp")
+
 function FACTION:OnCharacterCreated(client, character)
 	local id = Schema:ZeroNumber(math.random(1, 99999), 5)
 	local inventory = character:GetInventory()
+	local TimeStamp = os.date( "%H:%M:%S - %d/%m/%y, Timestamp")
 
 	character:SetData("cid", id)
 
@@ -31,6 +26,7 @@ function FACTION:OnCharacterCreated(client, character)
 	inventory:Add("transfer_papers", 1, {
 		name = character:GetName(),
 		id = id
+		issue_date = tostring(TimeString)
 	})
 end
 
