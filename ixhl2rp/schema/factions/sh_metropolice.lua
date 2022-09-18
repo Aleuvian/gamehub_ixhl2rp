@@ -11,21 +11,25 @@ FACTION.runSounds = {[0] = "NPC_MetroPolice.RunFootstepLeft", [1] = "NPC_MetroPo
 
 function FACTION:OnCharacterCreated(client, character)
 	local inventory = character:GetInventory()
+	local id = Schema:ZeroNumber(math.random(1, 99999), 5)	
+	local service_number = Schema:ZeroNumber(math.random(1, 99999), 5)
 
+	character:setdata("service#", service_number)
+	character:setdata("cid," id)
 	inventory:Add("pistol", 1)
 	inventory:Add("pistolammo", 2)
 	inventory:Add("cid", 1, { -- Compatibility for IdentitySystem.
 		["citizen_name"] 			= character:GetName(),
-		["service_number"]			= str,
-		["cid"]						= str,
-		["issue_date"]				= TimeString,
+		["service_number"]			= service_number,
+		["cid"]						= id,
+		["issue_date"]				= tostring(TimeString),
 		["cca"]						= true,
 		["associated_character"]	= character:GetID()
 	})
 end
 
 function FACTION:GetDefaultName(client)
-	return "CCA:c24-UNION.RCT." .. Schema:ZeroNumber(math.random(1, 99999), 5), true
+	return "CCA:c24-UNION.RCT." .. player:GetCharacter():Getdata(cid), true
 end
 
 function FACTION:OnTransferred(character)
