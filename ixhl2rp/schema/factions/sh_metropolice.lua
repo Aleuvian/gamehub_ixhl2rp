@@ -16,6 +16,7 @@ function FACTION:OnCharacterCreated(client, character)
 
 	character:setdata("service#", service_number)
 	character:setdata("cid," id)
+
 	inventory:Add("pistol", 1)
 	inventory:Add("pistolammo", 2)
 	inventory:Add("cid", 1, { -- Compatibility for IdentitySystem.
