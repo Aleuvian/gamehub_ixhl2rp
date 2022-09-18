@@ -2,7 +2,7 @@
 DEFINE_BASECLASS("base_gmodentity")
 
 ENT.Type = "anim"
-ENT.PrintName = "Trash Pile"
+ENT.PrintName = "Infestation Mass"
 ENT.Category = "Helix"
 ENT.Author = "Bilwin, modified by Aleuvian"
 ENT.Spawnable = true
