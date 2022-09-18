@@ -14,11 +14,18 @@ function FACTION:OnCharacterCreated(client, character)
 
 	inventory:Add("pistol", 1)
 	inventory:Add("pistolammo", 2)
-	inventory:Add("cid", 1)
+	inventory:Add("cid", 1, { -- Compatibility for IdentitySystem.
+		["citizen_name"] 			= character:GetName(),
+		["service_number"]			= str,
+		["cid"]						= str,
+		["issue_date"]				= TimeString,
+		["cca"]						= true,
+		["associated_character"]	= character:GetID()
+	})
 end
 
 function FACTION:GetDefaultName(client)
-	return "CCA-RCT." .. Schema:ZeroNumber(math.random(1, 99999), 5), true
+	return "CCA:c24-UNION.RCT." .. Schema:ZeroNumber(math.random(1, 99999), 5), true
 end
 
 function FACTION:OnTransferred(character)
