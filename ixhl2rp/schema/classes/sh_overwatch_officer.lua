@@ -1,6 +1,6 @@
-CLASS.name = "Overwatch Soldier"
+CLASS.name = "Overwatch Officer"
 CLASS.faction = FACTION_OTA
-CLASS.isDefault = true
+CLASS.isDefault = false
 
 function CLASS:OnSet(client)
 	local character = client:GetCharacter()
