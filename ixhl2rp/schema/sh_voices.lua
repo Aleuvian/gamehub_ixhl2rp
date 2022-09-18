@@ -386,6 +386,7 @@ Schema.voices.Add("Dispatch", "DEDUCTED", "Attention, occupants: Your block is n
 Schema.voices.Add("Dispatch", "EVASION BEHAVIOR", "Attention, please, evasion behaviour consistent with malcompliant defendant. Ground protection-team, alert, code: ISOLATE, EXPOSE, ADMINISTER.", "npc/overwatch/cityvoice/f_evasionbehavior_2_spkr.wav", true)
 Schema.voices.Add("Dispatch", "INDIVIDUAL CHARGED WITH", "Individual, you are charged with socio-endangerment level: ONE. Protection-unit prosecution code, DUTY, SWORD, MIDNIGHT.", "npc/overwatch/cityvoice/f_sociolevel1_4_spkr.wav", true)
 Schema.voices.Add("Dispatch", "INSPECTION", "Citizen notice, priority identification-check in-progress. Please assemble in your designated inspection positions.", "npc/overwatch/cityvoice/f_trainstation_assemble_spkr.wav", true)
+Schema.voices.Add("Dispatch", "INVASIVE OPERATION", "Alert, ground-units: Invasive operation of anti-citizen origin. Response code: ENGAGE, QUELL, INQUIRE.", "hlacomvoice/overwatch/07_10000.wav", true) -- 9/18
 Schema.voices.Add("Dispatch", "JUDGMENT WAIVER", "Attention, all ground-protection teams, judgment waiver now in effect. Capital prosecution is discretionary.", "npc/overwatch/cityvoice/f_protectionresponse_5_spkr.wav", true)
 Schema.voices.Add("Dispatch", "MISCOUNT DETECTED", "Attention, residents: Miscount detected in your block. Co-operation with your Civil Protection team permits full ration reward.", "npc/overwatch/cityvoice/f_trainstation_cooperation_spkr.wav", true)
 Schema.voices.Add("Dispatch", "MISSION FAILURE", "Attention, ground-units: Mission-failure will result in permanent off-world assignment. Code-reminder: SACRIFICE, COAGULATE, CLAMP.", "npc/overwatch/cityvoice/fprison_missionfailurereminder.wav", true)
@@ -396,9 +397,13 @@ Schema.voices.Add("Dispatch", "STATUS EVASION", "Attention, protection-team, sta
 Schema.voices.Add("Dispatch", "UNIDENTIFIED", "Attention, please: Unidentified person of interest, confirm your civil status with local protection-team immediately.", "npc/overwatch/cityvoice/f_confirmcivilstatus_1_spkr.wav", true)
 Schema.voices.Add("Dispatch", "UNREST PROCEDURE", "Attention, community: Unrest procedure code is now in effect. INNOCULATE, SHIELD, PACIFY. Code: PRESSURE, SWORD, STERILIZE.", "npc/overwatch/cityvoice/f_unrestprocedure1_spkr.wav", true)
 Schema.voices.Add("Dispatch", "UNREST STRUCTURE", "Alert, community ground-protection units, local unrest structure detected. ASSEMBLE, ADMINISTER, PACIFY.", "npc/overwatch/cityvoice/f_localunrest_spkr.wav", true)
+Schema.voices.Add("Dispatch", "INVASIVE OPERATION", "Alert, ground-units: Invasive operation of anti-citizen origin. Response code: ENGAGE, QUELL, INQUIRE.", "hlacomvoice/overwatch/07_10000.wav", true) -- 9/18
+Schema.voices.Add("Dispatch", "CIVILIZED SOCIETY", "Citizen reminder: A civilized society demands swift and targeted oversight. Prohibit fellow citizens from threatening the community.", "hlacomvoice/overwatch/07_10002.wav", true) -- 9/18
+Schema.voices.Add("Dispatch", "RESPONSE DEPLOYMENT", "Ground-protection team alert: Incident response deployment required: 9-2-1-2.", "hlacomvoice/overwatch/07_10003.wav", true) -- 9/18
+Schema.voices.Add("Dispatch", "CODE VOID", "Alert ground-units, Alert command-units: Emergency code: VOID.", "hlacomvoice/overwatch/07_10007.wav", true) -- 9/18
 
 Schema.voices.AddClass("Combine", function(client)
-	return client:IsCombine()
+	return client:IsCombine() 
 end)
 
 Schema.voices.AddClass("Dispatch", function(client)
