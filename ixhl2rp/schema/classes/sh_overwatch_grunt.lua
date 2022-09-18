@@ -1,4 +1,4 @@
-CLASS.name = "Overwatch Soldier"
+CLASS.name = "Overwatch Grunt"
 CLASS.faction = FACTION_OTA
 CLASS.isDefault = true
 
