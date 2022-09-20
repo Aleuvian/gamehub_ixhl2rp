@@ -5,7 +5,7 @@ AddCSLuaFile("shared.lua")
 include("shared.lua")
 
 function ENT:Initialize()
-	self:SetModel( table.Random(PLUGIN.trashModels) )
+	self:SetModel( table.Random(PLUGIN.infestationModels) )
 	self:PhysicsInit(SOLID_VPHYSICS)
 	self:SetUseType(SIMPLE_USE)
 	self:SetSolid(SOLID_VPHYSICS)
@@ -42,7 +42,7 @@ function ENT:Use(client, caller)
 		return
 	end
 
-	local cleantime = ix.config.Get("trashPileLootTime", 30)
+	local cleantime = ix.config.Get("InfestationCleanTime", 30)
 	client:SetAction("Searching something...", cleantime)
     self:SetNetVar('looting', true)
 
