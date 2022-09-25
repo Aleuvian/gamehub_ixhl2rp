@@ -1,4 +1,3 @@
-
 local PLUGIN = PLUGIN
 ENT.Type = "anim"
 ENT.PrintName = "Apartments Lock"
@@ -117,7 +116,7 @@ if (SERVER) then
             return
         end
     
-        if (bLocked) then
+        if (bLocked) then -- 
             self:EmitSound("buttons/combine_button2.wav")
             self.door:Fire("lock")
             self.door:Fire("close")
@@ -152,7 +151,7 @@ if (SERVER) then
             return
         end
 
-        local cid = client:GetCharacter():GetInventory():HasItem("cid_new") -- Woah, we need to adapt this to the new system too!
+        local cid = client:GetCharacter():GetInventory():HasItem("cid_new") -- c'est shit
 
         if client:IsCombine() then
             self:SetLocked(!self:GetLocked())
@@ -167,7 +166,7 @@ if (SERVER) then
             return
         end
 
-        if ( !self:AlreadyOwned(cid:GetData("id")) ) then -- Same here!
+        if ( !self:AlreadyOwned(cid:GetData("cid")) ) then -- lol
             self:DisplayError()
             self.nextUseTime = CurTime() + 2
     
