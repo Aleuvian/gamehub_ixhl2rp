@@ -137,7 +137,7 @@ if (SERVER) then
 			function(client)
 				local character = client:GetCharacter()
 
-				if (character and character:GetInventory() and !character:GetInventory():HasItem("cid")) then
+				if (character and character:GetInventory() and !character:GetInventory():HasItem("cid_new")) then
 					return true
 				else
 					return false
