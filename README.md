@@ -20,6 +20,6 @@ B) Aleuvian and I (Wachter/Upas-Source) have lives outside of gaming, and coding
 
 C) This is again, suppose to be for **FUN**, so please keep that mind when working on the repo or commenting on things. There will be spaghetti code, there will be syntax errors, and there will be issues to come. All of which will come and go as the schema expands and changes. It's natural, we expect it, and so should you.
 
-D) There is a license for most of our original coding, you can check out our licensing and read through that. Which is something I __strongly__ suggest before attempting to fork this repo to make your own original work out of it.
+D) There is a license for most of our original coding, you can check out our licensing and read through that. It is a MIT license. Which is something I __strongly__ suggest before attempting to fork this repo to make your own original work out of it.
 
 E) And finally, have some fun, and roleplay.
