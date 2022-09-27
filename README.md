@@ -22,4 +22,9 @@ C) This is again, suppose to be for **FUN**, so please keep that mind when worki
 
 D) There is a license for most of our original coding, you can check out our licensing and read through that. It is a MIT license. Which is something I __strongly__ suggest before attempting to fork this repo to make your own original work out of it.
 
-E) And finally, have some fun, and roleplay.
+E) If you have any _ABSOLUTELY NECESSARY QUESTIONS THAT ARE NECESSARY TO YOUR MENTAL SURVIVAL AS A RESULT OF ATTEMPTING TO REVERSE ENGINEER ANYTHING WITHIN THE REPO_.
+Here is our discord link: https://discord.gg/TtZJUYD3CA
+
+Don't join otherwise, we're not nice, and we don't want you to. We will however answer any of your questions, unless we don't feel like it, or your question is __dumb__. Dumb questions will result in __annihilation__.
+
+F) And finally, have some fun, and roleplay.
