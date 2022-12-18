@@ -1,7 +1,7 @@
 
 local PLUGIN = PLUGIN
-PLUGIN.trashList = {}
-PLUGIN.trashModels = {
+PLUGIN.infestationList = {}
+PLUGIN.infestationModels = {
     'models/jq/hlvr/props/xenpack/xen_flat_blob01.mdl',
     'models/jq/hlvr/props/xenpack/xen_flat_blob01_barrel_mush01.mdl',
     'models/jq/hlvr/props/xenpack/xen_strand_anchor008.mdl',
@@ -20,8 +20,8 @@ function PLUGIN:InitializedPlugins()
 	end
 end
 
-function PLUGIN:Calculate(client, trashPile)
-    if (IsValid(client) and client:IsPlayer() and IsValid(trashPile) and trashPile:GetClass() == "ix_infestation") then
+function PLUGIN:Calculate(client, infestationPile)
+    if (IsValid(client) and client:IsPlayer() and IsValid(infestationPile) and infestationPile:GetClass() == "ix_infestation") then
         local character = client:GetCharacter()
         if !character then return end
         local bStatus = false
@@ -54,36 +54,36 @@ function PLUGIN:Calculate(client, trashPile)
                     client:Notify('You\'ve found: '..itemName)
                 end
 
-                trashPile:SetNetVar('looted', true)
-                trashPile:SetNoDraw(true)
-                self:PileCooldown(trashPile)
+                infestationPile:SetNetVar('looted', true)
+                infestationPile:SetNoDraw(true)
+                self:PileCooldown(infestationPile)
             else
                 client:Notify('You didn\'t find anything')
-                trashPile:SetNetVar('looted', true)
-                trashPile:SetNoDraw(true)
-                self:PileCooldown(trashPile)
+                infestationPile:SetNetVar('looted', true)
+                infestationPile:SetNoDraw(true)
+                self:PileCooldown(infestationPile)
             end
         end
     end
 end
 
-function PLUGIN:PileCooldown(trashPile, time)
-    if (IsValid(trashPile) and trashPile:GetNetVar('looted') == true) then
+function PLUGIN:PileCooldown(infestationPile, time)
+    if (IsValid(infestationPile) and infestationPile:GetNetVar('looted') == true) then
         if !time then
             time = ix.config.Get('InfestationReload', 300)
         end
 
-        timer.Create('InfestationReload.'..trashPile:EntIndex(), time, 0, function()
-            if IsValid(trashPile) then
-                trashPile:SetNetVar('looted', false)
-                trashPile:SetNoDraw(false)
+        timer.Create('InfestationReload.'..infestationPile:EntIndex(), time, 0, function()
+            if IsValid(infestationPile) then
+                infestationPile:SetNetVar('looted', false)
+                infestationPile:SetNoDraw(false)
             end
         end)
     end
 end
 
 function PLUGIN:LoadData()
-	local trashPiles = ix.data.Get("trashpiles")
+	local infestationPile = ix.data.Get("infestationPile")
 
 	if (trashPiles) then
 		for _, v in pairs(trashPiles) do
@@ -104,19 +104,19 @@ function PLUGIN:LoadData()
 	end
 end
 
-local function getTimeLeft(trashpile)
-    if timer.Exists('trashpileReload.'..trashpile:EntIndex()) then
-        return timer.TimeLeft('trashpileReload.'..trashpile:EntIndex())
+local function getTimeLeft(infestationPile)
+    if timer.Exists('infestationReload.'..infestationPile:EntIndex()) then
+        return timer.TimeLeft('infestationReload.'..infestationPile:EntIndex())
     else
         return false
     end
 end
 
 function PLUGIN:SaveData()
-	local trashPiles = {}
+	local infestationPile = {}
 
 	for k, v in pairs(ents.FindByClass("ix_infestation")) do
-		trashPiles[#trashPiles + 1] = {
+		infestationPile[#trashPiles + 1] = {
 			v:GetAngles(),
 			v:GetPos(),
 			getTimeLeft(v),
@@ -125,5 +125,5 @@ function PLUGIN:SaveData()
 		}
 	end
 
-	ix.data.Set("trashpiles", trashPiles)
+	ix.data.Set("infestationpiles", infestationPile)
 end
