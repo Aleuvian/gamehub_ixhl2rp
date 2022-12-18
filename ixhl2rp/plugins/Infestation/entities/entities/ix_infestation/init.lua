@@ -46,7 +46,7 @@ function ENT:Use(client, caller)
 	client:SetAction("Searching something...", cleantime)
     self:SetNetVar('looting', true)
 
-	local uniqueID = "ixTrashSearch."..client:UniqueID()
+	local uniqueID = "ixInfestationSearch."..client:UniqueID()
 	local data = {}
 	data.filter = client
 	timer.Create(uniqueID, 0.1, cleantime / 0.1, function()
@@ -82,3 +82,4 @@ end
 function ENT:CanTool(player, trace, tool)
 	return false
 end
+
