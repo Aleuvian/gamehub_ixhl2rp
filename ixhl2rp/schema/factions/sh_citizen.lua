@@ -1,4 +1,3 @@
-
 FACTION.name = "Citizen"
 FACTION.description = "A regular human citizen enslaved by the Universal Union."
 FACTION.color = Color(150, 125, 100, 255)
