@@ -25,7 +25,7 @@ function FACTION:OnCharacterCreated(client, character)
 	inventory:Add("suitcase", 1)
 	inventory:Add("transfer_papers", 1, {
 		name = character:GetName(),
-		id = id
+		id = id,
 		issue_date = tostring(TimeString)
 	})
 end

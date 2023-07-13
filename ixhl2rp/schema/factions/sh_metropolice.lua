@@ -11,7 +11,7 @@ FACTION.runSounds = {[0] = "NPC_MetroPolice.RunFootstepLeft", [1] = "NPC_MetroPo
 
 function FACTION:OnCharacterCreated(client, character)
 	local inventory = character:GetInventory()
-	local str		= "CCA:c24.i2-A"..math.random(00,99) .. "://"..math.random(00000,99999)
+	local str		= "CCA:t7.i2-A"..math.random(00,99) .. "://"..math.random(00000,99999)
 	local TimeStamp = os.time()
 	local TimeString= os.date("%H:%M:%S - %d%m%Y", TimeStamp)
 
