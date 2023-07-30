@@ -11,4 +11,3 @@ ITEM.iconCam = {
 	fov	= 12.085652091515,
 	pos	= Vector(0, 200, 0)
 }
-ITEM.bDropOnDeath = true

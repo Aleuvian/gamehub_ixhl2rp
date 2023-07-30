@@ -39,21 +39,21 @@ ix.container.Register("models/props_wasteland/controlroom_storagecloset001b.mdl"
 
 ix.container.Register("models/props_wasteland/controlroom_filecabinet001a.mdl", {
 	name = "File Cabinet",
-	description = "A green metal filing cabinet.",
+	description = "A metal filing cabinet.",
 	width = 5,
 	height = 3
 })
 
 ix.container.Register("models/props_wasteland/controlroom_filecabinet002a.mdl", {
 	name = "File Cabinet",
-	description = "A green metal filing cabinet.",
+	description = "A metal filing cabinet.",
 	width = 3,
 	height = 6,
 })
 
 ix.container.Register("models/props_lab/filecabinet02.mdl", {
 	name = "File Cabinet",
-	description = "A green metal filing cabinet.",
+	description = "A metal filing cabinet.",
 	width = 5,
 	height = 3
 })
@@ -123,55 +123,4 @@ ix.container.Register("models/props_c17/cashregister01a.mdl", {
 	description = "A register with some buttons and a drawer.",
 	width = 2,
 	height = 1
-})
-
-ix.container.Register("models/props_office/officefilecabinet.mdl", {
-	name = "Filing Cabinet",
-	description = "An unpainted, metal filing cabinet.",
-	width = 4,
-	height = 5,
-})
-
-ix.container.Register("models/props_crates/static_crate_40.mdl", {
-	name = "Wooden Crate",
-	description = "A green, wooden crate.",
-	width = 4,
-	height = 4,
-})
-
-ix.container.Register("models/props_crates/static_crate_40.mdl", {
-	name = "Hard Case",
-	description = "A solid, metal military storage crate.",
-	width = 6,
-	height = 4,
-})
-
-ix.container.Register("models/props_crates/static_crate_40.mdl", {
-	name = "Hard Case",
-	description = "A solid, metal military storage crate.",
-	width = 6,
-	height = 4,
-})
-
-ix.container.Register("models/cca_tech_props/combine_cargo01a.mdl", {
-	name = "Combine Secure Case",
-	description = "A solid Combine metal case, secured with an advanced lock.",
-	width = 8,
-	height = 5,
-	locksound = "buttons/combine_button_locked.wav",
-})
-
-ix.container.Register("models/props_combineal/combine_locker01.mdl", {
-	name = "Combine Locker",
-	description = "A small metal Combine locker.",
-	width = 2,
-	height = 4,
-	locksound = "buttons/combine_button_locked.wav",
-})
-
-ix.container.Register("models/hlvr/combine_hazardprops/combinehazardprops_container.mdl", {
-	name = "Infestation Control Crate",
-	description = "A bright, yellow Infestation Control crate.",
-	width = 6,
-	height = 4,
 })

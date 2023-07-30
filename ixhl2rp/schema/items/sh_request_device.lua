@@ -1,5 +1,5 @@
 
 ITEM.name = "Request Device"
-ITEM.model = Model("models/dpfilms/metropolice/props/metrold_radio.mdl")
-ITEM.description = "A small communications device with a direct line to Combine dispatch."
+ITEM.model = Model("models/gibs/shield_scanner_gib1.mdl")
+ITEM.description = "A box with rounded corners, housing two buttons."
 ITEM.price = 20

@@ -11,4 +11,3 @@ ITEM.iconCam = {
     ang = Angle(0, 270, 0),
     fov = 10
 }
-ITEM.bDropOnDeath = true

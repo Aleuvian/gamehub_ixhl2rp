@@ -6,4 +6,3 @@ ITEM.description = "A Box that contains %s of .357 Ammo"
 ITEM.classes = {CLASS_EOW}
 ITEM.price = 10
 ITEM.flag = "V"
-ITEM.bDropOnDeath = true
